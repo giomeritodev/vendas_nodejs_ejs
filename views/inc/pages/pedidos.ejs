@@ -1,0 +1,162 @@
+<%- include("../header") -%>
+
+
+	<div class="add-pedidos">
+		<div class="form-row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-menu">
+							<div class="card-title">
+								<%= title %>
+							</div>
+							<nav class="card-menu-nav">
+				              <ul>
+				                <li>
+									<button type="button" onclick="viewCadastro('form_cad_pedido', 'table_lista')" class="btn btn-primary">Novo</button>
+				                </li>
+
+				                <li>
+				                  <button type="button" class="btn btn-secondary" disabled>Editar</button>
+				                </li>
+				                <li>
+				                  <button type="button" class="btn btn-danger" disabled>Delete</button>
+				                </li>
+				              </ul>
+				            </nav>
+						</div>
+					</div>
+
+					<div class="card-body">
+
+						<div id="table_lista">
+							<table class="table table-hover border bg-white">
+								<thead>
+									<tr style="background: lightblue;">
+										<th>#</th>
+										<th>Cliente</th>
+										<th>Valor</th>
+										<th>Status</th>
+										<th>Visualizar</th>
+									</tr>
+								<thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Giomerito Alves</td>
+										<td>R$ 556,00</td>
+										<td>Finalizado</td>
+										<td>
+											<button class="btn btn-info" btn-sm><i class="ion ion-md-eye"></i></button>				
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+
+						<div id="form_cad_pedido" class="cadastro_pedido" style="display: none;">
+
+							<div class="card">
+								<div class="card-header">
+
+									<form>
+										<div class="form-row">
+
+											<div class="col-12 form-row form-group">	
+												
+												<div class="col-md-3 col-sm-12 form-group">
+													<div class="input-group mb-3">
+													  <div class="input-group-prepend">
+													    <button class="btn btn-secondary" type="button" id="button-addon1">Cliente</button>
+													  </div>
+													  <input type="text" class="form-control" placeholder="Id" aria-label="Example text with button addon" aria-describedby="button-addon1">
+													</div>
+												</div>
+												<div class="col-md-9 com-sm-12 form-group">
+													<input type="text" class="form-control" placeholder="Nome do Cliente"/>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="form-row">
+										
+											<div class="col-12 form-row form-group">	
+												
+												<div class="col-md-3 col-sm-12 form-group">
+													<div class="input-group mb-3">
+													  <div class="input-group-prepend">
+													    <button class="btn btn-secondary" type="button" id="button-addon1">Produto</button>
+													  </div>
+													  <input type="text" autofocus class="form-control" placeholder="Id" aria-label="Example text with button addon" aria-describedby="button-addon1">
+													</div>
+												</div>
+												<div class="col-md-6 com-sm-12 form-group">
+													<input type="text" class="form-control" placeholder="Descrição do produto"/>
+												</div>
+												<div class="col-md-3 com-sm-12 form-group">
+													<input type="number" class="form-control" placeholder="Quantidade"/>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="form row">
+
+											<div class="col form-group">
+												<button type="button" class="btn btn-primary form-control">Adicionar</button>
+
+											</div>
+										</div>
+
+									</form>
+
+								</div>
+
+								<div class="card-body">
+
+									<div id="table-item">
+										<table>
+											<thead>
+												<tr>
+													<th>Item</th>
+													<th>Produto</th>
+													<th>Quant</th>
+													<th>Vlr Unit</th>
+													<th>Subtotal</th>
+													<th>Ações</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													
+												</tr>
+											<tbody>
+										</table>
+									</div>
+
+								</div>
+
+								<div class="card-footer">
+									Total da Venda: 
+									<label>R$ 0,00<Label>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card-footer">
+						
+					</div>
+
+				</div>
+			</div>			
+		</div>
+	</div>
+
+<br/>
+        
+<%- include("../footer-index") -%>    

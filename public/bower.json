@@ -1,0 +1,21 @@
+{
+  "name": "bemmais_sorvetes",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "ionicons": "^4.6.3",
+    "Font-Awesome": "^5.11.2"
+  }
+}

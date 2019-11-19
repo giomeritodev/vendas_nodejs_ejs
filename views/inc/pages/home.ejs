@@ -1,0 +1,62 @@
+<h1 class="mt-4">Pagina inicial</h1>
+<section class="content container-fluid">
+
+	<div class="row">
+	  <div class="col-md-5 col-sm-6 col-xs-12">
+		
+		<div class="info-box" onclick="window.location.href = '/clientes'" style="cursor:pointer">
+		  <span class="info-box-icon bg-aqua">			
+			<i class="ion ion-ios-contacts"></i>
+		  </span>
+
+		  <div class="info-box-content">
+			<span class="info-box-text">Clientes</span>
+			<span class="info-box-number"><%= data.nrclientes %></span>
+		  </div>
+		  <!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	  </div>
+	  <!-- /.col -->
+	  
+
+	  <div class="col-md-5 col-sm-6 col-xs-12">
+		
+		<div class="info-box" onclick="window.location.href = '/'" style="cursor:pointer">
+		  <span class="info-box-icon bg-aqua">			
+			<i class="ion ion-ios-person"></i>
+		  </span>
+
+		  <div class="info-box-content">
+			<span class="info-box-text">Usuários</span>
+			<span class="info-box-number"><%= data.nrusuarios %></span>
+		  </div>
+		  <!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	  </div>
+	  <!-- /.col -->
+
+	   <div class="col-md-5 col-sm-6 col-xs-12">
+		
+		<div class="info-box" onclick="window.location.href = '/produtos'" style="cursor:pointer">
+		  <span class="info-box-icon bg-aqua">			
+			<i class="ion ion-ios-cart"></i>
+		  </span>
+
+		  <div class="info-box-content">
+			<span class="info-box-text">Produtos</span>
+			<span class="info-box-number"><%= data.nrprodutos %></span>
+		  </div>
+		  <!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	  </div>
+	  <!-- /.col -->
+	  	
+
+	  
+
+	</div> 
+
+  </section>

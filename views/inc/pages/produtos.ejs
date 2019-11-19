@@ -1,0 +1,95 @@
+<%- include("../header") -%>
+
+    <div class="card">
+        <div class="card-header">
+          <div class="card-menu">
+            <div class="card-title">
+              <%= title %>
+            </div>
+            <nav class="card-menu-nav">
+
+              <ul>
+                <li>
+                  <button type="button" onclick="viewCadastro('form_cad_produto', 'table_lista')" class="btn btn-primary">Novo</button>
+                </li>
+
+                <li>
+                  <button type="button" class="btn btn-secondary" disabled>Editar</button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-danger" disabled>Delete</button>
+                </li>
+              </ul>
+
+            </nav>
+          </div>
+        </div>
+
+        <div class="card-body">
+
+            <div id="table_lista">
+              <table class="table-hover table responsive">
+                <thead>
+
+                  <tr>
+                    <th></td>
+                    <th>#</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                  </tr>
+
+                </thead>
+
+                 <tbody>
+
+                  <% produtos.forEach(function(row){ %>
+
+                    <tr>
+                      <td><input type="checkbox" class="checkproduto"></td>
+                      <td><%= row.id %></td>
+                      <td><%= row.descricao %></td>
+                      <td><%= row.preco %></td>
+                    </tr>
+
+                  <% }); %>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div id="form_cad_produto">
+
+              <form action="/produtos" method="post">
+                <div class="form">
+
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <label for="inputDescricao">Descrição</label>
+                      <input type="text" required class="form-control" name="descricao" id="inputDescricao" placeholder="Informe uma descrição para o item" value="<%= body.descricao %>"/>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <label for="preco">Preço</label>
+                      <input type="number" required class="form-control" name="preco" id="preco" placeholder="Informe um preço para o item" value="<%= body.preco %>"/>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-primary btn-clock" value="Salvar" />
+                      <input type="button" class="btn btn-danger btn-clock" onclick="viewLista('form_cad_produto', 'table_lista')" value="Cancelar" />
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
+
+            </div>
+
+        </div>
+    </div>
+
+<%- include("../footer-index") -%>

@@ -1,0 +1,103 @@
+<%- include("./../header") -%>
+
+	<div class="card">
+		<div class="card-header">
+			<div class="card-menu">
+				<div class="card-title">
+					<%= title %>
+				</div>
+				<nav class="card-menu-nav">
+
+	              	<ul>
+		                <li>
+		                  <button type="button" onclick="viewCadastro('form_cad_cliente', 'table_lista')" class="btn btn-primary">Novo</button>
+		                </li>
+
+		                <li>
+		                  <button type="button" class="btn btn-secondary" disabled>Editar</button>
+		                </li>
+		                <li>
+		                  <button type="button" class="btn btn-danger" disabled>Delete</button>
+		                </li>
+		            </ul>
+
+            	</nav>
+
+			</div>
+		</div>
+
+		<div class="card-body">
+			<div id="table_lista">
+              <table class="table-hover table responsive">
+                <thead>
+
+                  <tr>
+                    <th></td>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                  </tr>
+
+                </thead>
+
+                 <tbody>
+
+                  <% clientes.forEach(function(row){ %>
+
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td><%= row.id %></td>
+                      <td><%= row.nome %></td>
+                      <td><%= row.email %></td>
+                    </tr>
+
+                  <% }); %>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div id="form_cad_cliente">
+
+				<form action="/clientes" method="post">
+
+					<div class="row form-group">					
+						<div class="col-md-12">
+							<label for="inputNome">Nome</label>
+							<input type="text" required class="form-control" id="inputNome" name="nome" placeholder="Informe um nome" value="<%= body.nome %>" />
+						</div>
+
+						<div class="col-md-12">
+							<label for="inputEmail">Email</label>
+							<input type="text" required class="form-control" id="inputEmail" name="email" placeholder="Informe um email" value="<%= body.email %>" />
+						</div>
+
+						<div class="col-md-12">
+							<label for="inputFone">Telefone</label>
+							<input type="text" class="form-control" id="inputFone" required name="telefone" placeholder="Informe um telefone" value="<%= body.telefone %>" />
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+						 	<input type="submit" class="btn btn-primary btn-clock" value="Salvar"/>
+                  			<input type="button" class="btn btn-danger btn-clock" onclick="viewLista('form_cad_cliente', 'table_lista')" value="Cancelar" />
+						</div>
+					</div>
+
+				</form>		
+            </div>
+
+		</div>
+
+	</div>
+
+
+		<!--		
+
+-->
+
+
+
+        
+<%- include("../footer-index") -%>    
