@@ -35,6 +35,7 @@
 									<tr style="background: lightblue;">
 										<th>#</th>
 										<th>Cliente</th>
+                                        <th>Pedido</th>
 										<th>Valor</th>
 										<th>Status</th>
 										<th>Visualizar</th>
@@ -44,6 +45,7 @@
 									<tr>
 										<td>1</td>
 										<td>Giomerito Alves</td>
+                                        <td>12456</td>
 										<td>R$ 556,00</td>
 										<td>Finalizado</td>
 										<td>
@@ -59,7 +61,7 @@
 							<div class="card">
 								<div class="card-header">
 
-									<form>
+									<form action="/pedidos" method="post">
 										<div class="form-row">
 
 											<div class="col-12 form-row form-group">	
@@ -95,7 +97,7 @@
 													<input type="text" class="form-control" placeholder="Descrição do produto"/>
 												</div>
 												<div class="col-md-3 com-sm-12 form-group">
-													<input type="number" class="form-control" placeholder="Quantidade"/>
+													<input type="number" class="form-control" placeholder="Quantidade" value="1"/>
 												</div>
 
 											</div>
@@ -103,9 +105,8 @@
 
 										<div class="form row">
 
-											<div class="col form-group">
-												<button type="button" class="btn btn-primary form-control">Adicionar</button>
-
+											<div class="col-md-4 col-sm-12 form-group add">
+												<button type="submit" class="btn btn-primary form-control">Adicionar</button>
 											</div>
 										</div>
 
@@ -116,8 +117,8 @@
 								<div class="card-body">
 
 									<div id="table-item">
-										<table>
-											<thead>
+										<table class="table table-responsive">
+											<theader>
 												<tr>
 													<th>Item</th>
 													<th>Produto</th>
@@ -126,20 +127,58 @@
 													<th>Subtotal</th>
 													<th>Ações</th>
 												</tr>
-											</thead>
+											</theader>
 											<tbody>
 												<tr>
-													
+													<td></td>
 												</tr>
 											<tbody>
+										
+
 										</table>
 									</div>
 
 								</div>
 
 								<div class="card-footer">
-									Total da Venda: 
-									<label>R$ 0,00<Label>
+
+									<div class="form-row">
+										<div class="col-12 form-row form-group">
+											<div class="col-md-2 col-sm-12 form-group">
+												<label>Total items</label>
+												<input type"number" placeholder="0" class="form-control">
+											</div>
+											<div class="col-md-2 col-sm-12 form-group">
+												<label>Valor pago</label>
+												<input type"text" placeholder="R$ 0,00" class="form-control">
+											</div>
+											<div class="col-md-2 col-sm-12 form-group">
+												<label>Desconto</label>
+												<input type"text" placeholder="R$ 0,00" class="form-control">
+											</div>
+											<div class="col-md-6 col-sm-12 form-group total">
+												<label>Total venda:</label> 
+												<div class="input-group mb-3">
+												  <div class="input-group-prepend">
+												    <button class="btn btn-secondary" type="button" id="button-addon1">R$</button>
+												  </div>
+												  <input type="text" class="form-control" placeholder="0,00" aria-label="Example text with button addon" aria-describedby="button-addon1">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-row">
+										<div class="col-12 form-group form-row">
+											<div class="col-md-3 col-sm-12 from-group">
+												<input type="button" class="btn btn-primary form-control" value="Salvar"/>
+											</div>
+											<div class="col-md-3 col-sm-12 form-group">
+												<input type="button" class="btn btn-danger form-control" value="Cancelar"/>
+											</div>
+										</div>
+									</div>
+									
 								</div>
 
 							</div>
@@ -148,10 +187,7 @@
 
 					</div>
 
-					<div class="card-footer">
-						
-					</div>
-
+					
 				</div>
 			</div>			
 		</div>

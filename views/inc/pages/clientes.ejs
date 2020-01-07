@@ -44,8 +44,8 @@
 
                   <% clientes.forEach(function(row){ %>
 
-                    <tr>
-                      <td><input type="checkbox"></td>
+                    <tr id="_row">
+                      <td><input type="checkbox" id="check-row" selected="false"></td>
                       <td><%= row.id %></td>
                       <td><%= row.nome %></td>
                       <td><%= row.email %></td>
@@ -91,13 +91,5 @@
 		</div>
 
 	</div>
-
-
-		<!--		
-
--->
-
-
-
         
 <%- include("../footer-index") -%>    

@@ -1,15 +1,15 @@
 
-#Dependencias
+# Dependencias
 
-##mysql2
+## mysql2
     -- npm install --save mysql2
 
     Banco de dados do sistema
 
-##express-session
+## express-session
     -- npm install --save express-session
 
-##Redis
+## Redis
     -- npm install --save connect-redis
     -- npm install --save redis
 

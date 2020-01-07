@@ -16,12 +16,9 @@ router.post('/', function(req, res, next) {
     } else if(!req.body.telefone){
       clientes.render(req, res, "Informe um telefone");
     }else{
-
       clientes.save(req.body).then(results => {
-
-        clientes.render(req, res, null, `O cliente ${req.body.nome} foi cadastrado!`);
+        clientes.render(req, res, null, `O cliente "${req.body.nome}" foi cadastrado!`);
         req.body = {};
-
       }).catch(err => {
         clientes.render(req, res, err.message);
       });
